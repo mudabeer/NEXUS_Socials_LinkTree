@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS Coding Club — Social Hub</title>
+  <meta name="description" content="One link to every official NEXUS Coding Club platform — Instagram, WhatsApp, Discord, GitHub and LinkedIn." />
+
+  <!-- Favicon (reuses the club mark) -->
+  <link rel="icon" type="image/png" href="assets/nexus-logo.png" />
+
+  <!-- Fonts: Space Grotesk (display/tech), Inter (body), JetBrains Mono (labels/data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for platform icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient tech backdrop: grid + animated node network (purely decorative) -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__grid"></div>
+    <canvas id="nexus-canvas"></canvas>
+  </div>
+
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <p class="hero__eyebrow">SCET &middot; Student Coding Community</p>
+
+      <div class="hero__logo">
+        <img
+          src="assets/nexus-logo.png"
+          alt="NEXUS — Next-Gen Coders United Society"
+          class="hero__logo-img"
+        />
+      </div>
+
+      <h1 class="hero__title visually-hidden">NEXUS</h1>
+
+      <p class="hero__tagline">Learn <span class="dot">•</span> Build <span class="dot">•</span> Connect</p>
+
+      <p class="hero__description">
+        A student-driven community where we learn, build, collaborate, and grow together.
+      </p>
+    </header>
+
+    <!-- ============ SOCIAL LINKS ============ -->
+    <section class="links" aria-label="Official NEXUS Coding Club platforms">
+
+      <a
+        class="card"
+        href="https://www.instagram.com/scet_nexuscodingclub?igsi=MWVjNzVoYWR0eXo1NQ=="
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Follow NEXUS on Instagram (opens in a new tab)"
+      >
+        <span class="card__icon card__icon--instagram" aria-hidden="true">
+          <i class="fa-brands fa-instagram"></i>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Follow NEXUS on Instagram</span>
+          <span class="card__subtitle">@scet_nexuscodingclub</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </a>
+
+      <a
+        class="card"
+        href="https://whatsapp.com/channel/0029Vapn8RwEquiQfi5Pth45"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join our WhatsApp Channel (opens in a new tab)"
+      >
+        <span class="card__icon card__icon--whatsapp" aria-hidden="true">
+          <i class="fa-brands fa-whatsapp"></i>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Join our WhatsApp Channel</span>
+          <span class="card__subtitle">Announcements &amp; updates</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </a>
+
+      <a
+        class="card"
+        href="https://discord.gg/q6uC2cXrM"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join our Discord Community (opens in a new tab)"
+      >
+        <span class="card__icon card__icon--discord" aria-hidden="true">
+          <i class="fa-brands fa-discord"></i>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Join our Discord Community</span>
+          <span class="card__subtitle">Chat, events &amp; study groups</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </a>
+
+      <a
+        class="card"
+        href="https://github.com/nexuscodingclub"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Explore our GitHub (opens in a new tab)"
+      >
+        <span class="card__icon card__icon--github" aria-hidden="true">
+          <i class="fa-brands fa-github"></i>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Explore our GitHub</span>
+          <span class="card__subtitle">Projects &amp; open source</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </a>
+
+      <a
+        class="card"
+        href="https://www.linkedin.com/company/nexus-coding-club/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Connect with us on LinkedIn (opens in a new tab)"
+      >
+        <span class="card__icon card__icon--linkedin" aria-hidden="true">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Connect with us on LinkedIn</span>
+          <span class="card__subtitle">NEXUS Coding Club, official page</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </a>
+
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <p class="footer__tagline">Connect. Learn. Build. Grow. 🚀</p>
+      <p class="footer__copy">&copy; 2026 NEXUS Coding Club</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
